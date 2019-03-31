@@ -1,0 +1,7 @@
+.DS_Store
+.vscode/
+crack.py
+help.txt
+scanner.py
+viopy/
+*.pyc
