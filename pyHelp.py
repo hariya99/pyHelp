@@ -31,7 +31,7 @@ class ModulesHelp:
             #create an instance of import class
             self.import_module = __import__(self.module.split('.')[0])
         except:
-            print(sys.exc_info()[:])
+            print(sys.exc_info()[1])
             sys.exit()
 
     def set_stdout(self):
@@ -50,7 +50,7 @@ class ModulesHelp:
             help(self.module)
             self._restore_stdout()
         except:
-            print(sys.exc_info()[:])
+            print(sys.exc_info()[1])
             sys.exit()
 
     def _restore_stdout(self):
@@ -86,7 +86,7 @@ class ModulesHelp:
             else:
                 process = sp.run(['open' , '-a' , self.default_editor, 'help.txt'])
         except:
-            print(sys.exc_info()[:])
+            print(sys.exc_info()[1])
             sys.exit()
         finally:
             try:
